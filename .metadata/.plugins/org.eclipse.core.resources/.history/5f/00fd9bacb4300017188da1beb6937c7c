@@ -1,0 +1,12 @@
+package com.smile.sz.support;
+
+public class DubboProvider {
+	
+    public static final String SPRING_CONFIG = "dubbo.spring.config";
+	
+	public static void main(String[] args) {
+		com.alibaba.dubbo.container.Main.main(args);
+        /*String configPath = ConfigUtils.getProperty(SPRING_CONFIG);
+        System.out.println(configPath);*/
+	}
+}

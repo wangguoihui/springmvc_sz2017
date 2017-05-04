@@ -1,0 +1,30 @@
+package com.smile.sz.web.service.dubboservice.user;
+
+import javax.annotation.Resource;
+import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+import com.smile.sz.web.service.dao.user.model.s61.UserInfo;
+import com.smile.sz.web.service.dbservice.user.UserDBService;
+
+// 标注 括号内的自定义bean名 通过getBean取得
+@Service("iUserService")
+// @Service
+public class UserServiceImpl implements IUserService {
+	
+	@Resource
+	private UserDBService userDBService;
+
+    public UserBaseDto getUserBaseInfo(Integer userId) throws Throwable {
+    	UserInfo userInfo = userDBService.getUserBaseInfo(userId);
+        UserBaseDto userBaseDto = new UserBaseDto();
+        
+        //手机号
+        String mobile = userInfo.getF04();
+        if (!StringUtils.isEmpty(mobile) && mobile.trim().length() == 11){
+            mobile = mobile.substring(0,3) + "****" + mobile.substring(7);
+        }
+        userBaseDto.setMobile(mobile);
+        return userBaseDto;
+    }
+
+}

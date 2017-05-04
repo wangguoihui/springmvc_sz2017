@@ -1,0 +1,212 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.smile.sz</groupId>
+  <artifactId>dubbo_provider</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <name>dubbo_provider Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+	  <!-- spring -->
+	  <spring.version>4.0.2.RELEASE</spring.version>
+	  <!-- mybatis -->
+	  <mybatis.version>3.2.6</mybatis.version>
+	  <mybatis-spring.version>1.2.2</mybatis-spring.version>
+	  <!-- log4j -->
+	  <slf4j.version>1.7.7</slf4j.version>
+	  <!-- junit -->
+	  <junit.version>4.12</junit.version>
+	  <log4j.version>1.2.17</log4j.version>
+	  <dubbo.version>2.8.4</dubbo.version>
+  </properties>
+  
+  <dependencies>
+   	<!-- api -->
+    <dependency>
+	    <groupId>com.smile.sz</groupId>
+	    <artifactId>adc_core_api</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+   	<!-- junit -->
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <!-- spring -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-oxm</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-tx</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-jdbc</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-aop</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context-support</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-test</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<!-- Mysql-->
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.30</version>
+	</dependency>
+	<!-- dbcp -->
+	<dependency>
+		<groupId>commons-dbcp</groupId>
+		<artifactId>commons-dbcp</artifactId>
+		<version>1.2.2</version>
+	</dependency>
+    <!-- mybatis -->
+    <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis</artifactId>
+        <version>${mybatis.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis-spring</artifactId>
+        <version>${mybatis-spring.version}</version>
+    </dependency>
+	<!-- cache -->
+    <dependency>
+	    <groupId>org.mybatis.caches</groupId>
+	    <artifactId>mybatis-redis</artifactId>
+	    <version>1.0.0-beta2</version>
+	</dependency>
+	<!-- commons -->
+	<dependency>
+		<groupId>commons-beanutils</groupId>
+		<artifactId>commons-beanutils</artifactId>
+		<version>1.9.2</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-lang3</artifactId>
+		<version>3.4</version>
+	</dependency>
+	<dependency>
+  		<groupId>commons-codec</groupId>
+  		<artifactId>commons-codec</artifactId>
+  		<version>1.9</version>
+  	</dependency>
+  	<!-- dubbox -->
+	<dependency>
+		<groupId>com.alibaba</groupId>
+		<artifactId>dubbo</artifactId>
+		<version>${dubbo.version}</version>
+		<exclusions>
+          	<exclusion>
+          		<groupId>org.springframework</groupId>
+          		<artifactId>spring</artifactId>
+          	</exclusion>
+          	<exclusion>
+          	   <groupId>org.apache.httpcomponents</groupId>
+               <artifactId>httpclient</artifactId>
+          	</exclusion>
+          	<exclusion>
+              <groupId>org.apache.httpcomponents</groupId>
+               <artifactId>httpcore</artifactId>
+           </exclusion>
+          </exclusions>
+	</dependency>
+	<dependency>
+	  <groupId>org.apache.httpcomponents</groupId>
+	  <artifactId>httpcore</artifactId>
+	  <version>4.4.1</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.apache.httpcomponents</groupId>
+	  <artifactId>httpclient</artifactId>
+	  <version>4.4.1</version>
+	  <exclusions>
+	      <exclusion>
+	          <groupId>org.apache.httpcomponents</groupId>
+                   <artifactId>httpcore</artifactId>
+	      </exclusion>
+	  </exclusions>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.zookeeper</groupId>
+		<artifactId>zookeeper</artifactId>
+		<version>3.3.3</version>
+		<exclusions>
+	    	<exclusion>
+				<groupId>javax.jms</groupId>
+				<artifactId>jms</artifactId>
+			</exclusion>
+		    <exclusion>
+		    	<groupId>com.sun.jmx</groupId>
+		    	<artifactId>jmxri</artifactId>
+		    </exclusion>
+		    <exclusion>
+		    	<groupId>com.sun.jdmk</groupId>
+		    	<artifactId>jmxtools</artifactId>
+		    </exclusion>
+    	</exclusions>
+	</dependency>
+	<dependency>
+		<groupId>com.github.sgroschupf</groupId>
+		<artifactId>zkclient</artifactId>
+		<version>0.1</version>
+	</dependency>
+	
+  </dependencies>
+  
+  <build>
+      <finalName>dubbo_provider</finalName>
+  </build>
+</project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

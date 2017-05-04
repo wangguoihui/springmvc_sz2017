@@ -1,0 +1,9 @@
+dubbo.container=logback,spring
+
+#dubbo.spring.config=classpath*:META-INF/spring/*.xml,classpath:dubbo-provider.xml
+dubbo.spring.config=classpath*:/applicationContext.xml
+
+dubbo.logback.file=logs/dubbo-provider.log
+dubbo.logback.level=debug
+dubbo.logback.maxhistory=30
+#dubbo.jetty.port=8080

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.smile.sz.adc.bean.UserInfoDto"/>
+<fullyQualifiedTypeName name="org.apache.commons.lang3.builder.ToStringBuilder"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.smile.sz.web.service.dao.user.s61.UserInfoMapper"/>
+<fullyQualifiedTypeName name="com.smile.sz.web.service.dao.user.model.s61.UserInfo"/>
+<fullyQualifiedTypeName name="com.smile.sz.web.service.dbservice.user.UserDBService"/>
+<fullyQualifiedTypeName name="org.springframework.util.StringUtils"/>
+<fullyQualifiedTypeName name="org.mybatis.spring.annotation.MapperScan"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+<fullyQualifiedTypeName name="com.smile.sz.adc.intf.IUserService"/>
+<fullyQualifiedTypeName name="com.smile.sz.adc.bean.UserBaseDto"/>
+<fullyQualifiedTypeName name="javax.annotation.Resource"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+</qualifiedTypeNameHistroy>

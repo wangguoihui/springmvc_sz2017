@@ -1,0 +1,3 @@
+#Dubbo Registry Cache
+#Thu May 04 18:38:00 CST 2017
+com.smile.sz.adc.intf.IUserService=empty\://10.1.10.235\:20883/com.smile.sz.adc.intf.IUserService?anyhost\=true&application\=dubbo_main_provider&category\=configurators&check\=false&default.timeout\=50000&dubbo\=2.8.4&generic\=false&interface\=com.smile.sz.adc.intf.IUserService&methods\=getUserBaseInfo&pid\=15276&retries\=0&side\=provider&timestamp\=1493894278866

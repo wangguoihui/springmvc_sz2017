@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="dubbo_spring_provider" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="dubbo_provider"/>
+			<item value="zoo"/>
+			<item value="dubbo.registry.address"/>
+			<item value="dubbo"/>
+			<item value="spring_core_api"/>
+			<item value="spring-web"/>
+			<item value="spring"/>
+			<item value="google"/>
+		</list>
+		<list key="replacehistory">
+			<item value="dubbo_spring_provider"/>
+			<item value="dubbo_main_provider"/>
+			<item value="adc_core_api"/>
+			<item value="com.smile.sz.web.service.dao.user"/>
+			<item value="springmvc_projects"/>
+			<item value="com.smile.sz.web.service.user"/>
+			<item value="com.njq.nongfadai.dao"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="596" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="400" key="DIALOG_HEIGHT"/>
+		<item value="944" key="DIALOG_X_ORIGIN"/>
+		<item value="505" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

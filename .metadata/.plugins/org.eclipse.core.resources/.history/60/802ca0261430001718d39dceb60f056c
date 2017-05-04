@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.smile.sz</groupId>
+  <artifactId>dubbo_consumer</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>dubbo_consumer Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+   <properties>
+	  <!-- spring -->
+	  <spring.version>4.0.2.RELEASE</spring.version>
+	  <!-- mybatis -->
+	  <mybatis.version>3.2.6</mybatis.version>
+	  <mybatis-spring.version>1.2.2</mybatis-spring.version>
+	  <!-- log4j -->
+	  <slf4j.version>1.7.7</slf4j.version>
+	  <junit.version>4.12</junit.version>
+	  <log4j.version>1.2.17</log4j.version>
+	  <dubbo.version>2.8.4</dubbo.version>
+  </properties>
+  
+  <dependencies>
+  	<!-- api -->
+    <dependency>
+	    <groupId>com.smile.sz</groupId>
+	    <artifactId>adc_core_api</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- spring -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-oxm</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-tx</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-jdbc</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-aop</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context-support</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-test</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+  </dependencies>
+  <build>
+    <finalName>dubbo_consumer</finalName>
+  </build>
+</project>

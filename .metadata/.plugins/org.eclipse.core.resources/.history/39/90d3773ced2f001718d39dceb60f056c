@@ -1,0 +1,40 @@
+package com.qxp.nf.web.service;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+import com.bentengwu.adcutils.HuaHaiException;
+import com.qxp.nf.web.service.dbservice.ConstantService;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = { "classpath:applicationContext.xml" })
+public class ConstantTest {
+	
+	@Autowired
+	private ConstantService constantService;
+
+	@Transactional
+	@Test
+	public void applyTest() throws HuaHaiException {
+		
+		int unitPriceCommsn = Integer.parseInt(constantService.getConstantVal("provider_order","service_fee"));
+		System.out.println(unitPriceCommsn);
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

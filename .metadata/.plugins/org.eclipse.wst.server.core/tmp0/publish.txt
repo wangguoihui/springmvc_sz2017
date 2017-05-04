@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu May 04 18:40:15 CST 2017
+org.eclipse.jst.j2ee.server\:/binary\:E\:\\code\\m2\\repository_hz\\org\\springframework\\spring-web\\4.0.2.RELEASE\\spring-web-4.0.2.RELEASE.jar=WEB-INF/lib/spring-web-4.0.2.RELEASE.jar
+org.eclipse.jst.j2ee.server\:adc_core_api=WEB-INF/lib/adc_core_api-0.0.1-SNAPSHOT.jar

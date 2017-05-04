@@ -1,0 +1,18 @@
+package com.smile.sz.web.service.dubboservice.user;
+
+import com.smile.sz.adc.bean.UserBaseDto;
+import com.smile.sz.adc.intf.IUserService;
+
+/**
+ * 用户接口
+ * Created by Administrator on 2016.5.11 011.
+ */
+public class UserServiceImpl implements IUserService{
+
+   
+    UserBaseDto getUserBaseInfo(Integer userId) throws Throwable{
+    	
+    }
+  
+	
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://code.alibabatech.com/schema/dubbo
+                        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+ 
+    <dubbo:consumer check="false"/>
+     
+    <!-- 使用其他系统的服务 -->
+    <dubbo:reference id="agentDubboService" interface="com.qxp.nf.adc_core_api.agent_bizz.intf.AgentDubboService" />
+    
+    <dubbo:reference id="adcMtMemberMapService" interface="com.qxp.nf.adc_core_api.agent_bizz.intf.AdcMtMemberMapService" />
+    <dubbo:reference id="merchantService" interface="com.qxp.nf.adc_core_api.agent_bizz.intf.MerchantService" />
+    <dubbo:reference id="merchantGroupDubboService" interface="com.qxp.nf.adc_core_api.agent_bizz.intf.MerchantGroupDubboService" />
+    <dubbo:reference id="merchantDetailService" interface="com.qxp.nf.adc_core_api.agent_bizz.intf.MerchantDetailService" />
+    <dubbo:reference id="terminalService" interface="com.qxp.nf.adc_core_api.agent_bizz.intf.TerminalService" />
+
+    <dubbo:reference id="systemEncryptService" interface="com.qxp.nf.adc_core_api.agent_bizz.intf.SystemEncryptService" />
+
+    <dubbo:reference id="adcOwnerServiceForAdvertisement" interface="com.qxp.nf.adc_core_api.adc.intf.AdcOwnerServiceForAdvertisement" />
+    <dubbo:reference id="manageService" interface="com.qxp.nf.adc_core_api.manage.intf.ManageService" />
+
+    <dubbo:reference id="advertisementDubboService" interface="com.qxp.nf.adc_core_api.adc.intf.AdvertisementService" />
+</beans>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://code.alibabatech.com/schema/dubbo
+                        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="${dubbo.application.name}"  />
+    <!-- 暴露服务 -->
+    <dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}" />
+    <!-- 注册中心 -->
+    <dubbo:registry address="${dubbo.registry.address}" timeout="${dubbo.registry.timeout}" file="${dubbo.registry.file}" />
+    <dubbo:provider timeout="${dubbo.registry.timeout}" />
+
+	<!-- 对外的接口 -->
+	<dubbo:service interface="com.qxp.nf.adc_core_api.adc.intf.AdcOwnerService" ref="adcOwnerService" retries="0" />
+	<dubbo:service interface="com.qxp.nf.adc_core_api.ucenter.intf.UCenterService" ref="ucenterService" retries="0" />
+    
+	<dubbo:service interface="com.qxp.nf.adc_core_api.ucenter.intf.MemberService" ref="memberService" />
+    <dubbo:service interface="com.qxp.nf.adc_core_api.ucenter.intf.MemberBankService" ref="memberBankService" />
+    <dubbo:service interface="com.qxp.nf.adc_core_api.ucenter.intf.MemberAccountService" ref="memberAccountService" />
+    <dubbo:service interface="com.qxp.nf.adc_core_api.ucenter.intf.MemberCouponService" ref="memberCouponService" />
+
+    <dubbo:service interface="com.qxp.nf.adc_core_api.ucenter.intf.AgentOrderService" ref="agentOrderService" />
+    <dubbo:service interface="com.qxp.nf.adc_core_api.ucenter.intf.MerchantOrderService" ref="merchantOrderService" />
+    <dubbo:service interface="com.qxp.nf.adc_core_api.ucenter.intf.constant.UcConstantService" ref="ucConstantService" />
+
+    <dubbo:service interface="com.qxp.nf.adc_core_api.ucenter.intf.AgentReportDataService" ref="agentReportDataService" />
+    <dubbo:service interface="com.qxp.nf.adc_core_api.ucenter.intf.MerchantReportDataService" ref="merchantReportDataService" />
+    
+    <dubbo:service interface="com.qxp.nf.adc_core_api.ucenter.intf.IProviderOrderService" ref="iProviderOrderService" />
+    <dubbo:service interface="com.qxp.nf.adc_core_api.ucenter.intf.ChargeService" ref="chargeService" />
+
+    <dubbo:service interface="com.qxp.nf.adc_core_api.ucenter.intf.report.MtReportDataService" ref="mtReportDataService" />
+
+    <dubbo:service interface="com.qxp.nf.adc_core_api.ucenter.intf.mgt.MtOrderExportService" ref="mtOrderExportService" />
+
+</beans>

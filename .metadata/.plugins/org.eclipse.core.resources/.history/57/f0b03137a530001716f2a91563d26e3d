@@ -1,0 +1,8 @@
+package com.smile.sz.support;
+
+public class DubboProvider {
+
+	public static void main(String[] args) {
+		com.alibaba.dubbo.container.Main.main(args);
+	}
+}
